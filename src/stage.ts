@@ -13,7 +13,7 @@ const params = {
   specularColor: new THREE.Color(0xffffff),
   envMapIntensity: 1,
   lightIntensity: 1,
-  exposure: 1,
+  exposure: 1
 };
 
 // const raycaster = new THREE.Raycaster();
@@ -30,8 +30,8 @@ function onPointerMove(event: MouseEvent) {
 
 export const setup = () => {
   const hdrEquirect = new RGBELoader()
-    .setPath("/public/")
-    .load("royal_esplanade_1k.hdr", function () {
+    .setPath(new URL("../public/", import.meta.url).href + "/")
+    .load("royal_esplanade_1k.hdr", function() {
       hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
       init();
     });
@@ -58,7 +58,7 @@ export const setup = () => {
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
-    window.addEventListener("pointermove", (event) => {
+    window.addEventListener("pointermove", event => {
       onPointerMove(event);
       sphere.position.x = pointer.x;
       sphere.position.y = pointer.y;
@@ -86,7 +86,7 @@ export const setup = () => {
       specularColor: params.specularColor,
       opacity: params.opacity,
       side: THREE.DoubleSide,
-      transparent: true,
+      transparent: true
     });
 
     return material;
