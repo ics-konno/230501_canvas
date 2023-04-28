@@ -1,5 +1,5 @@
 import * as THREE from "three";
-import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader";
+import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 
 const params = {
   color: 0xffffff,
