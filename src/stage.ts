@@ -30,7 +30,7 @@ function onPointerMove(event: MouseEvent) {
 
 export const setup = () => {
   const hdrEquirect = new RGBELoader()
-    .setPath("../public/")
+    .setPath("/public/")
     .load("royal_esplanade_1k.hdr", function () {
       hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
       init();
