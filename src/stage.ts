@@ -2,6 +2,10 @@ import * as THREE from "three";
 import { RGBELoader } from "three/examples/jsm/loaders/RGBELoader.js";
 const fileName = "royal_esplanade_1k.hdr";
 
+/**
+ * デモ1：環境マッピングのソースコード
+ */
+
 const params = {
   color: 0xffffff,
   transmission: 1,
@@ -31,7 +35,7 @@ function onPointerMove(event: MouseEvent) {
 
 export const setup = () => {
   const hdrEquirect = new RGBELoader()
-    .setPath(import.meta.env.BASE_URL)
+    .setPath(import.meta.env.BASE_URL + "assets/")
     .load(fileName, function() {
       hdrEquirect.mapping = THREE.EquirectangularReflectionMapping;
       init();

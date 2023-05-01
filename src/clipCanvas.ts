@@ -1,6 +1,9 @@
 import picture from "../public/picture.jpeg";
 import svg from "../public/blob.svg";
 
+/**
+ * デモ２：画像にSVGをクリッピングするのソースコード
+ */
 export const drawImage = async () => {
   const canvas = document.querySelector<HTMLCanvasElement>("#clip-canvas");
   const img = new Image();

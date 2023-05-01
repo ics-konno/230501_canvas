@@ -1,6 +1,9 @@
 import * as THREE from "three";
 import picture from "../public/picture.jpeg";
 
+/**
+ * デモ３：波紋のソースコード
+ */
 export const setupWave = () => {
   const container = document.getElementById("app2");
 
